@@ -5,8 +5,8 @@ chrome.runtime.sendMessage({
     url: window.location.href,
     title: document.title
 }, (response) => {
-    console.log(response)
-    if (!response.allowed) {
+    console.log(response.res)
+    if (!response.res.study) {
         document.body.innerHTML = "<h1 style='text-align:center;color:white;background-color:black;height:100%;'>🚫 Blocked! Stay Focused! 🚫</h1>";
     }
 });
